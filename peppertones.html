@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peppertones</title>
+    <style>
+     
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: '나눔손글씨 금은보화', Times, serif;
+            background-color: skyblue;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            border: 0;
+        }
+    </style>
+    <style>
+        #main_header {
+           
+            width: 960px;
+            margin: 0 auto;
+         
+            height: 160px;
+            position: relative;
+        }
+
+        #main_header>#title {
+            position: absolute;
+            left: 20px;
+            top: 30px;
+        }
+
+       
+
+        #main_header>#main_lnb {
+            position: absolute;
+            right: 0;
+            bottom: 10px;
+        }
+    </style>
+
+    
+    <style>
+        #main_lnb>ul {
+            overflow: hidden;
+        }
+
+        #main_lnb>ul>li {
+            float: left;
+        }
+
+        #main_lnb>ul>li>a {
+            display: block;
+            padding: 10px 20px;
+            border: 1px solid white;
+        }
+
+        #main_lnb>ul>li>a:hover {
+            background-color: white;
+            color: aquamarine;
+        }
+
+        #main_lnb>ul>li:first-child>a {
+            border-radius: 20px 0 0 20px;
+        }
+
+        #main_lnb>ul>li:last-child>a {
+            border-radius: 0 20px 20px 0;
+        }
+    </style>
+    <style>
+        @font-face {
+            font-family: 'SBAggroB';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        h1 {
+            color: navy;
+            font-family: SBAggroB;
+        }
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Qahiri&display=swap');
+
+    
+    </style>
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/NanumGarMaesGeur.css" rel="stylesheet">
+    <style>
+        #main_header a {
+            font-family: 'NanumGarMaesGeur';
+            font-weight: bold;
+        }
+    </style>
+    <style>
+        #content {
+            width: 960px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        #content>#main_section {
+            width: 750px;
+            float: left;
+        }
+
+        #content>#main_aside {
+            width: 200px;
+            float: right;
+
+        }
+
+        #main_section>article.main_article {
+            margin-bottom: 10px;
+            padding: 20px;
+            border: 5px dashed navy;
+        }
+
+        #main_section>article.main_article>p {
+            font-family: '나눔손글씨 달의궤도';
+            font-size: larger;
+        }
+    </style>
+    <style>
+      
+        input:nth-of-type(1) {
+            display: none;
+        }
+
+     
+
+        input:nth-of-type(1)~div:nth-of-type(1) {
+            display: none;
+        }
+
+     
+
+        input:nth-of-type(1):checked~div:nth-of-type(1) {
+            display: block;
+        }
+
+      
+        input:nth-of-type(2) {
+            display: none;
+        }
+
+      
+
+        input:nth-of-type(2)~div:nth-of-type(2) {
+            display: none;
+        }
+
+        input:nth-of-type(2):checked~div:nth-of-type(2) {
+            display: block;
+        }
+
+     
+        section.buttons {
+            overflow: hidden;
+        }
+
+        section.buttons>label {
+          
+            display: block;
+            float: left;
+          
+            width: 100px;
+          
+            height: 30px;
+            line-height: 30px;
+          
+            text-align: center;
+         
+            box-sizing: border-box;
+            border: 1px solid black;
+
+            background-color: mediumaquamarine;
+            color: white;
+        }
+
+       
+        input:nth-of-type(1):checked~section.buttons>label:nth-of-type(1) {
+            background-color: white;
+            color: mediumaquamarine;
+            border: 3px solid navy;
+        }
+
+    
+        input:nth-of-type(2):checked~section.buttons>label:nth-of-type(2) {
+            background-color: white;
+            color: mediumaquamarine;
+            border: 3px solid navy;
+        }
+    </style>
+
+    <style>
+        .item {
+            overflow: hidden;
+            padding: 10px;
+            border: 3px solid white;
+            border-top: none;
+        }
+
+
+        .description {
+            float: left;
+            margin-left: 10px;
+        }
+
+        .description>strong {
+            display: block;
+            width: 120px;
+
+        }
+
+        .description>strong+p {
+            width: 120px;
+        }
+
+      
+        .description>strong,
+        .description>strong+p {
+         
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+    <style>
+        #main_footer {
+        
+            width: 960px;
+            margin: 0 auto;
+            margin-bottom: 10px;
+           
+            box-sizing: border-box;
+            padding: 10px;
+            border: 1px solid white;
+            
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="main_header">
+        <div id="title">
+            <h1>뉴테라피 2인조 밴드</h1>
+            <h1>페퍼톤스</h1>
+        </div>
+       
+        <nav id="main_lnb">
+            <ul>
+                <li>
+                    <a href="https://www.genie.co.kr/detail/artistAlbum?xxnm=14944144"> <h2>디스코그래피</h2></a>
+
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/peppertones1"><h2>페이스북</h2></a>
+
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/user/sayoxx/videos"><h2>유튜브</h2></a>
+
+                </li>
+                <li>
+                    <a href="http://www.antenna.co.kr/front/main.do#!/front/artist.do?SEQ=4"><h2>소속사</h2></a>
+
+                </li>
+                <li>
+                    <a href="http://peppertones.net/"><h2>공식사이트</h2></a>
+
+                </li>
+                <li>
+                    <a href="https://twitter.com/pptnznoshel"><h2>트위터</h2></a>
+
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+    <div id="content">
+        <section id="main_section">
+            <article class="main_article">
+                <h1>소개</h1><br>
+                <img src="250.jfif" alt="">
+                <br><br>
+                <h2>
+                    듣는 이들에게 아무 부담을 떠안기지 않으면서도 곡이 시작되자마자 누구의 음악인지 
+                    알아챌 수 있을 만큼 개성있는 정서와 뉘앙스. <br><br>목청 돋워 소리치지 않아도 
+                    무대 밖으로 흘러나오는 노랫말에 귀를 기울이게 하는 지적인 호소력. <br><br>
+                    세련된 곡 작업을 바탕 삼아 적재적소에 배치된 무리 없는 사운드. <br><br>
+                    페퍼톤스의 음악은 오래도록 마주해도 늘 뭔가를 기대하게 할 만한 신뢰를 획득했다.<br><br>
+~ EBS 스페이스 공감
+                </h2>
+            </article>
+            <article class="main_article">
+                <h1>활동</h1><br>
+                <img src="8f4.jfif" width="512px" height="341px"  alt=""><br><br>
+                <h2>2003년 KAIST 전산과 동기 신재평과 이장원이 '우울증을 위한 
+                    뉴테라피 2인조 밴드'라는 캐치프레이즈 아래 결성했다. <br><br>
+
+                    2005년 첫 번째 정규앨범 <COLORFUL EXPRESS>를 발표했다. 
+                    주특기인 촘촘하면서도 매끄럽게 미끄러지는 그루브와 친근하면서도 결코 단순하지 않은 멜로디로 깊이있는 스케일을 선보였다. 
+                    <br><br>
+                
+                    
+                    2008년 두 번째 정규앨범 <NEW STANDARD>를 발매했다. 어느 한 곳에 정착하지 않고 떠도는 히피(Hippie)처럼 특정 장르에 얽매이지 않고 급진적이고 실험적인 사운드를 보여주었다. 
+                    <br><br>    2009년 세 번째 정규앨범 <SOUNDS GOOD!>을 발매했다.
+                            목표는 인디레이블에서 여러 제약 때문에 충분히 완성하지 못했던 팝 사운드를 제대로 구현하는 것이었는데, 
+                            아무 '개입' 없이 만들었다면 더 신나게 만들었던 2집을 확장한 앨범이 되었을 테지만 결과적으로는 대중에게 좀 더 사랑받은 
+                            1집에 가까운 방향으로 3집이 나왔다고 한다.
+                            <br><br>
+                            2012년 네 번째 정규앨범 <beginner's luck>을 발매했다. '할 수 있는 
+                            예쁜 음악의 목표치에 거의 도달했고 더 이상 팬시한 걸 추구하는 의미가 없어서' 밴드 포맷으로 노선을 바꾸었다.
+                            <br><br>
+                            2014년 다섯 번째 정규앨범 <HIGH-FIVE>를 발매했다. 극단적으로 간단한 편곡으로 자연스러움에 초점을 맞춰 빈티지한 밴드 사운드를 만드는데 주력했으며
+                             공연에서 거의 똑같이 구현 가능한 단순한 사운드로 만들었다. 
+                            <br><br>
+                            2018년 여섯 번째 정규앨범 <long way>를 발매했다.  4-5집과 달리 서사적인 부분을 받쳐주기 위해 악기를 많이 썼고 편곡적으로도 다시 복잡해졌다.
+                            
+
+
+
+                    </h2>
+            
+            
+                    </article>
+            <article class="main_article">
+                <h1>어록</h1><br>
+                <img src="1RZ.jpg" width="400px" height="400px" alt=""><br><br>
+                <h2>음악으로 부귀영화를 누릴 생각은 없구요. 사람들이 듣고 한때 즐길 수 있는 음악을 계속 생산하는 것이 목표예요. <br>
+                      /레이디 경향 2006년 3월호<br><br>
+                    저희는 꿈꾸는 사람들이고, 명랑함을 꿈꾸고 있습니다. 자기가 원하는 걸 노래하는 게 순리 아니겠습니까? <br>
+                    /08.11.07. 윤도현의 러브레터 <br><br>
+                    페퍼톤스는 날씨 좋을 때를 골라서 일을 해요. 햇살의 에너지를 받아서 음악에 잘 정제해서 담는 작업을 하는 사람들입니다. 
+                    비 오는 날은 놉니다.   <br>/09.04.20. 유희열의 라디오천국 <br><br>
+                    들었을 때 듣는 사람이 미소 짓게 만드는 음악을 하고 싶다. 해왔다고도 생각한다. <br> /14.09.16. 10Asia <br>
+                
+                </h2>
+            </article>
+        </section>
+        <aside id="main_aside">
+            <input id="first" type="radio" name="tab" checked="checked">
+            <input id="second" type="radio" name="tab">
+            <section class="buttons">
+                <label for="first"> <h1>대표곡</h1></label>
+                <label for="second"> <h1>V LIVE</h1></label>
+            </section>
+            <div class="tab_item">
+                <ul>
+                    <li class="item">
+                        <a href="https://www.youtube.com/watch?v=tAOxycf_hhw">
+                            
+                            <div class="description">
+                                <h1>NEW CHANCE!</h1>
+                            </div>
+                        </a></li>
+                    <li class="item">
+                        <a href="https://youtu.be/XeB6vnIjm30">
+                            
+                            <div class="description">
+                                <h1>Ready, Get Set, Go!</h1>
+                                
+                            </div>
+                        </a></li>
+                    <li class="item">
+                        <a href="https://www.youtube.com/watch?v=wv8BiOK2c6k">
+                           
+                            <div class="description">
+                                <h1>행운을 빌어요</h1>
+                            </div>
+                        </a></li>
+                    <li class="item">
+                        <a href="https://www.youtube.com/watch?v=0V6Vr0rJVZQ">
+                          
+                            <div class="description">
+                                <h1>노래는 불빛처럼 달린다</h1>
+                            </div>
+                        </a></li>
+                </ul>
+            </div>
+            <div class="tab_item">
+                <ul>
+                    <li class="item">
+                        <a href="https://www.vlive.tv/video/18220">
+                            
+                            <div class="description">
+                                <h1>합주실 생중계</h1>
+                            </div>
+                        </a></li>
+                    <li class="item">
+                        <a href="https://www.vlive.tv/video/68713">
+                            
+                            <div class="description">
+                                <h1>
+                                    ⭐️로 💫로 라이브
+                                </h1>
+                            </div>
+                        </a></li>
+                    <li class="item">
+                        <a href="https://www.vlive.tv/video/38130">
+                            
+                            <div class="description">
+                                <h1>
+                                    주인공은 나야나
+                                </h1>
+                            </div>
+                        </a></li>
+                    <li class="item">
+                        <a href="https://www.vlive.tv/video/14745">
+                           
+                            <div class="description">
+                                <h1>
+                                    헬로,안테나 그 후
+                                </h1>
+                            </div>
+                        </a></li>
+                </ul>
+            </div>
+
+        </aside>
+    </div>
+    <footer id="main_footer">
+        <h3>이 문서는 자유롭게 이용하실 수 있습니다.</h3>
+        <address>Antena Music Forever</address>
+
+    </footer>
+</body>
+
+</html>
